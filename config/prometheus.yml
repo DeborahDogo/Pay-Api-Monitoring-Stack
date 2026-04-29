@@ -26,3 +26,9 @@ scrape_configs:
       - targets: ["pay-api:5000"]
         labels:
           app: "pay-api-app"
+
+  - job_name: "notification-service"
+    static_configs:
+      - targets: ["notification-svc:8080"]
+        labels:
+          app: "notification-svc"  
